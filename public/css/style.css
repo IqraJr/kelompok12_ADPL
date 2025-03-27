@@ -1,0 +1,255 @@
+/* Gunakan font Poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #007BFF;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Container Styling */
+.container {
+    margin-top: 80px; /* Sesuaikan dengan tinggi header */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section Styling */
+section {
+    padding: 50px 20px;
+}
+
+h2 {
+    color: #007BFF;
+}
+
+/* Map Styling */
+.map-container {
+    margin-top: 20px;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Styling untuk Section Cabang Kami */
+#branches {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa; /* Warna latar belakang */
+}
+
+#branches h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    color: #0044cc; /* Warna biru */
+    margin-bottom: 20px;
+}
+
+/* Kontainer untuk Maps */
+.map-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar map */
+    flex-wrap: wrap; /* Agar tetap responsif di layar kecil */
+}
+
+/* Styling untuk iframe Google Maps */
+.map-container iframe {
+    width: 30%; /* Membuat 3 kolom sejajar */
+    height: 250px;
+    border-radius: 10px; /* Membuat sudut melengkung */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efek hover pada map */
+.map-container iframe:hover {
+    transform: scale(1.05); /* Sedikit membesar saat hover */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 50%;
+    font-size: 18px;
+    color: #333;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.category-list {
+    display: flex;
+    gap: 20px; /* Jarak antar kategori */
+    justify-content: center; /* Pusatkan kategori */
+    margin: 20px 0;
+}
+
+.category-btn {
+    display: flex;
+    flex-direction: column; /* Teks di bawah ikon */
+    align-items: center; /* Pusatkan ikon dan teks */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #636aef;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.category-btn i {
+    font-size: 80px; /* Ukuran ikon diperbesar */
+    margin-bottom: 5px; /* Jarak antara ikon dan teks */
+    color: #0044cc; /* Warna ikon sesuai preferensi */
+    display: block; /* Pastikan ikon tidak sejajar dengan teks */
+}
+
+.category-btn:hover {
+    background-color: #0056b3;
+}
+
+.category-btn span {
+    display: block; /* Pastikan teks berada di bawah ikon */
+    margin-top: 5px; /* Beri sedikit jarak dari ikon */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.product-list {
+    display: none; /* Pastikan semua produk tetap tersembunyi saat awal */
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: #526bf5;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 150px; /* Sesuaikan ukuran */
+    height: auto;
+    border-radius: 8px; /* Opsional: membuat sudut melengkung */
+}
+
+/* css button */
+.button {
+    background-color: #77b1f3; /* Warna maroon sesuai preferensimu */
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #166ffd; /* Warna lebih terang saat hover */
+}
